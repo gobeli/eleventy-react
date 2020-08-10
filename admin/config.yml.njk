@@ -1,0 +1,19 @@
+---
+permalink: 'admin/config.yml'
+---
+backend:
+  name: github
+  repo: gobeli/eleventy-react
+  branch: master
+media_folder: 'static/images'
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Home Page'
+        name: 'home'
+        file: '_data/home.json'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: Photo, name: photo, widget: image }
